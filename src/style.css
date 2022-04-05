@@ -1,0 +1,58 @@
+:root {
+  --bg-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  color: #545862;
+}
+
+main {
+  text-align: center;
+}
+
+section {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 60%;
+  margin: 50px auto;
+}
+
+article h3 {
+  text-align: left;
+}
+
+table {
+  border: 2px solid black;
+  width: 300px;
+  margin: 20px 0;
+}
+
+tr {
+  height: 20px;
+}
+
+table tr:nth-child(even) {
+  background-color: var(--bg-color);
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  display: block;
+  height: 30px;
+  width: 80%;
+  margin: 10px 0;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100px;
+  float: right;
+  margin-right: 20%;
+}
