@@ -22,7 +22,7 @@ section {
 }
 
 article h3 {
- text-align: left;
+  text-align: left;
 }
 
 table {
@@ -50,7 +50,7 @@ input {
   margin: 10px 0;
 }
 
-input[type = "submit"] {
+input[type="submit"] {
   width: 100px;
   float: right;
   margin-right: 20%;
