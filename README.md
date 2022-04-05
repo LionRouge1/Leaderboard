@@ -1,1 +1,2 @@
-# Leaderboard
+# Leaderboard# .gitignore
+node_modules/
