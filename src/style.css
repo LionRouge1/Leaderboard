@@ -48,6 +48,7 @@ input {
   height: 30px;
   width: 80%;
   margin: 10px 0;
+  outline: none;
 }
 
 input[type="submit"] {
