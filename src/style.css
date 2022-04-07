@@ -51,7 +51,7 @@ input {
   outline: none;
 }
 
-input[type="submit"] {
+input[type="button"] {
   width: 100px;
   float: right;
   margin-right: 20%;
