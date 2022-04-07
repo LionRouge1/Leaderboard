@@ -3,9 +3,17 @@ import refresh from './refresh.js';
 import submit from './submit.js';
 
 const gameUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/M4j8ipwhBO11Kf9GfGqr/scores/';
-const table = document.getElementById('scores_list');
-const scoreForm = document.getElementById('score_form');
+const table = document.querySelector('#scores_list > tbody');
 const btnRefresh = document.getElementById('refresh');
+
+const showError = (message, type = 'success') => {
+  const box = document.createElement('span');
+  box.style.color = (type === 'success') ? 'green' : 'red';
+  box.id = 'box_message';
+  box.textContent = message;
+  document.querySelector('body').appendChild(box);
+  setTimeout(() => box.remove(), 6000);
+};
 
 const display = async () => {
   table.innerHTML = '';
@@ -20,8 +28,7 @@ const display = async () => {
 btnRefresh.addEventListener('click', display);
 
 display().catch((error) => {
-  table.style.color = 'red';
-  table.textContent = error;
+  showError(error, 'error');
 });
 
 document.querySelector('input[type = "button"]').addEventListener('click', () => {
@@ -30,14 +37,8 @@ document.querySelector('input[type = "button"]').addEventListener('click', () =>
   submit(gameUrl, name, score).then((ValMessage) => {
     document.getElementById('name').value = '';
     document.getElementById('score').value = '';
-    const message = document.createElement('span');
-    message.style.color = 'green';
-    message.textContent = ValMessage.message;
-    scoreForm.appendChild(message);
+    showError(ValMessage.message);
   }).catch((error) => {
-    const message = document.createElement('span');
-    message.style.color = 'red';
-    message.textContent = error;
-    scoreForm.appendChild(message);
+    showError(error, 'error');
   });
 });
