@@ -10,21 +10,17 @@
         <h1>Leaderboard</h1>
         <section>
             <article class="scores-container">
-                <h3>Recent score <button type="button">Refresh</button></h3>
-                <table>
-                    <tr><td>Name:</td><td>124</td></tr>
-                    <tr><td>Name:</td><td>124</td></tr>
-                    <tr><td>Name:</td><td>124</td></tr>
-                    <tr><td>Name:</td><td>124</td></tr>
-                    <tr><td>Name:</td><td>124</td></tr>
+                <h3>Recent score <button type="button" id="refresh">Refresh</button></h3>
+                <table id="scores_list">
+                    <!-- data from API -->
                 </table>
             </article>
             <article class="add-score">
                 <h3>Add your score</h3>
-                <form action="index.html">
+                <form action="index.html" id="score_form">
                     <input type="text" name="Name" id="name" placeholder="Your name">
                     <input type="number" name="Score" id="score" placeholder="Your score">
-                    <input type="submit" value="Submit">
+                    <input type="button" value="Submit">
                 </form>
             </article>
         </section>
