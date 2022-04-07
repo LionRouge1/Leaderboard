@@ -1,12 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+
 :root {
   --bg-color: lavender;
   --hd-color: rgb(74, 138, 138);
   --hd-font: 'Rubik Bubbles', cursive;
   --Al-font: 'Nunito Sans', sans-serif;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,6 @@
 body {
   background-color: var(--bg-color);
   font-family: var(--Al-font);
-
 }
 
 main {
@@ -32,6 +33,7 @@ h1 {
   color: var(--hd-color);
   font-family: var(--hd-font);
 }
+
 section {
   display: grid;
   grid-template-columns: auto auto;
@@ -78,7 +80,7 @@ tr {
   height: 20px;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: var(--bg-color);
 }
 

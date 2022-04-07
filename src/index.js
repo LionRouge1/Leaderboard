@@ -8,12 +8,12 @@ const btnRefresh = document.getElementById('refresh');
 
 const showError = (message, type = 'success') => {
   const box = document.createElement('span');
-  box.style.color = (type === 'success')? 'green' : 'red';
+  box.style.color = (type === 'success') ? 'green' : 'red';
   box.id = 'box_message';
   box.textContent = message;
   document.querySelector('body').appendChild(box);
   setTimeout(() => box.remove(), 6000);
-}
+};
 
 const display = async () => {
   table.innerHTML = '';
