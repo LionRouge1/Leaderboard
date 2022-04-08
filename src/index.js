@@ -1,8 +1,6 @@
 import './style.css';
-import refresh from './refresh.js';
-import submit from './submit.js';
+import Getdata from './getData.js';
 
-const gameUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/M4j8ipwhBO11Kf9GfGqr/scores/';
 const table = document.querySelector('#scores_list > tbody');
 const btnRefresh = document.getElementById('refresh');
 
@@ -17,8 +15,8 @@ const showError = (message, type = 'success') => {
 
 const display = async () => {
   table.innerHTML = '';
-  const res = await refresh(gameUrl);
-  const scores = res.result;
+  const data = new Getdata();
+  const scores = await data.refresh();
   scores.forEach(({ user, score }) => {
     const list = `<tr><td>${user}:</td><td>${score}</td></tr>`;
     table.insertAdjacentHTML('beforeend', list);
@@ -34,7 +32,8 @@ display().catch((error) => {
 document.querySelector('input[type = "button"]').addEventListener('click', () => {
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
-  submit(gameUrl, name, score).then((ValMessage) => {
+  const data = new Getdata(name, score);
+  data.submit().then((ValMessage) => {
     document.getElementById('name').value = '';
     document.getElementById('score').value = '';
     showError(ValMessage.message);
