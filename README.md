@@ -13,11 +13,11 @@
 - Webpack
 
 ### Setup
->`git clone https://github.com/LionRouge1/Leaderboard.git`
+>`git clone https://github.com/LionRouge1/Leaderboard.git`<br>
 >`cd Leaderboard`
 
 ### Run tests
->`npm install`
+>`npm install`<br>
 >`npm start`
 
 ## Author
