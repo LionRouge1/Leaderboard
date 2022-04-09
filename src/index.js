@@ -1,5 +1,5 @@
 import './style.css';
-import getData from './getData.js';
+import Getdata from './getData.js';
 
 const table = document.querySelector('#scores_list > tbody');
 const btnRefresh = document.getElementById('refresh');
@@ -15,7 +15,7 @@ const showError = (message, type = 'success') => {
 
 const display = async () => {
   table.innerHTML = '';
-  const data = new getData();
+  const data = new Getdata();
   const scores = await data.refresh();
   scores.forEach(({ user, score }) => {
     const list = `<tr><td>${user}:</td><td>${score}</td></tr>`;
@@ -32,7 +32,7 @@ display().catch((error) => {
 document.querySelector('input[type = "button"]').addEventListener('click', () => {
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
-  const data = new getData(name, score);
+  const data = new Getdata(name, score);
   data.submit().then((ValMessage) => {
     document.getElementById('name').value = '';
     document.getElementById('score').value = '';

@@ -127,7 +127,7 @@ tbody tr:nth-child(3) > td:nth-child(1)::before {
 tbody tr:nth-child(1) > td:nth-child(1)::before,
 tbody tr:nth-child(2) > td:nth-child(1)::before,
 tbody tr:nth-child(3) > td:nth-child(1)::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;
   font-size: 20px;
   display: inline-block;
