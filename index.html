@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/84967187a9.js" crossorigin="anonymous"></script>
+    <title>Leaderboard's home page</title>
+<script defer src="/webpack-demo/index.bundle.js"></script></head>
+<body>
+    <main>
+        <h1>Leaderboard</h1>
+        <section>
+            <article class="scores-container">
+                <h3>Recent score <button type="button" id="refresh">Refresh</button></h3>
+                <table id="scores_list">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data from API -->
+                    </tbody> 
+                </table>
+            </article>
+            <article class="add-score">
+                <h3>Add your score</h3>
+                <form action="index.html" id="score_form">
+                    <input type="text" name="Name" id="name" placeholder="Your name">
+                    <input type="number" name="Score" id="score" placeholder="Your score">
+                    <input type="button" value="Submit">
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
