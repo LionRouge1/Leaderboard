@@ -72,16 +72,71 @@ article h3 {
 
 table {
   border: 2px solid var(--bg-color);
-  width: 300px;
   margin: 20px 0;
+  max-width: 500px;
+  min-width: 350px;
+  display: block;
 }
 
-tr {
-  height: 20px;
+tbody {
+  display: block;
+  height: 400px;
+  overflow-y: scroll;
+  margin: 0;
 }
 
-tr:nth-child(even) {
+thead {
+  display: block;
+}
+
+tr,
+th {
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3px 0;
+}
+
+td {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgba(74, 138, 138, 0.486);
+}
+
+tbody tr:nth-child(even) {
   background-color: var(--bg-color);
+}
+
+tbody tr:nth-child(1) > td:nth-child(1)::before {
+  content: "\f091";
+}
+
+tbody tr:nth-child(2) > td:nth-child(1)::before {
+  content: "\f5a2";
+}
+
+tbody tr:nth-child(3) > td:nth-child(1)::before {
+  content: "\f559";
+}
+
+tbody tr:nth-child(1) > td:nth-child(1)::before,
+tbody tr:nth-child(2) > td:nth-child(1)::before,
+tbody tr:nth-child(3) > td:nth-child(1)::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 20px;
+  display: inline-block;
+  width: 60px;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: yellow;
 }
 
 form {
@@ -90,10 +145,12 @@ form {
 
 input {
   display: block;
-  height: 30px;
+  height: 35px;
   width: 80%;
   margin: 10px 0;
+  padding-left: 15px;
   outline: none;
+  border-radius: 5px 0;
 }
 
 input[type="button"] {

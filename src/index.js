@@ -16,8 +16,7 @@ const showError = (message, type = 'success') => {
 const display = async () => {
   table.innerHTML = '';
   const data = new getData();
-  const res = await data.refresh();
-  const scores = res.result;
+  const scores = await data.refresh();
   scores.forEach(({ user, score }) => {
     const list = `<tr><td>${user}:</td><td>${score}</td></tr>`;
     table.insertAdjacentHTML('beforeend', list);

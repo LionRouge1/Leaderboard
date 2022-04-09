@@ -26,6 +26,6 @@ export default class getData {
   async refresh() {
     const response = await fetch(this.url);
     const json = await response.json();
-    return json;
+    return json.result.sort((a, b) => b.score - a.score);
   };
 }
