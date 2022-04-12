@@ -143,20 +143,59 @@ form {
   margin-top: 20px;
 }
 
-input {
-  display: block;
-  height: 35px;
-  width: 80%;
-  margin: 10px 0;
-  padding-left: 15px;
-  outline: none;
-  border-radius: 5px 0;
+.inpt_card {
+  position: relative;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.inpt_card input {
+   border: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   appearance: none;
+   outline: none;
+   height: 35px;
+   width: 100%;
+   padding-left: 15px;
+   font-size: 14px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   background:
+     linear-gradient(90deg, var(--hd-color), var(--hd-color)) center bottom/0 0.15em no-repeat,
+     linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+     linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+   transition: background-size 0.3s ease;
+}
+
+.inpt_card label {
+   position: absolute;
+   left: 15px;
+   top: 9px;
+   width: calc(100% - (30px));
+   overflow: hidden;
+   color: #aaa;
+   transition: all 0.3s ease;
+}
+
+.inpt_card input.dirty + label,
+.inpt_card input:focus + label,
+.inpt_card input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: var(--hd-color);
+}
+
+.inpt_card input.dirty,
+.inpt_card input:not(:placeholder-shown),
+.inpt_card input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
 }
 
 input[type="button"] {
   width: 100px;
   float: right;
-  margin-right: 20%;
   border-radius: 5px;
   border: 1px solid white;
   height: 30px;
