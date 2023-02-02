@@ -15,13 +15,15 @@ Live version [here](https://lionrouge1.github.io/Leaderboard/)
 - Javascript
 - Webpack
 
-### Setup
->`git clone https://github.com/LionRouge1/Leaderboard.git`<br>
->`cd Leaderboard`
+## Getting Start
+- `git clone https://github.com/LionRouge1/Leaderboard.git` to clone the repo.
+- `cd Leaderboard`
+- `npm install`
+- `npm start`
 
 ### Run tests
->`npm install`<br>
->`npm start`
+- `npx hint .` to run Webhint
+- `npx stylelint "**/*.{css,scss}"` to run Stylelint
 
 ## Author
 
