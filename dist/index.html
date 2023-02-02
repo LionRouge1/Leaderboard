@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="image"
+        property="og:image"
+        content="https://raw.githubusercontent.com/LionRouge1/Leaderboard/develop/src/images/Leaderboardblog.png"
+    />
+    <meta
+      name="description"
+      content="The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service."
+    />
+    <meta name="author" content="Matchoudi">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://kit.fontawesome.com/84967187a9.js" crossorigin="anonymous"></script>
+    <title>Leaderboard's home page</title>
+<script defer src="/Leaderboard/index.bundle.js"></script></head>
+<body>
+    <main>
+        <h1>Leaderboard</h1>
+        <section>
+            <article class="scores-container">
+                <h3>Recent score <button type="button" id="refresh">Refresh</button></h3>
+                <table id="scores_list">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data from API -->
+                    </tbody> 
+                </table>
+            </article>
+            <article class="add-score">
+                <h3>Add your score</h3>
+                <form action="index.html" id="score_form">
+                    <div class="inpt_card">
+                        <input type="text" name="Name" id="name" placeholder="">
+                        <label for="name">Your name</label>
+                    </div>
+                    <div class="inpt_card">
+                       <input type="number" name="Score" id="score" placeholder=""> 
+                       <label for="score">Your score</label>
+                    </div>
+                    <input type="button" value="Submit">
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
