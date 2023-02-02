@@ -24,6 +24,7 @@ Live version [here](https://lionrouge1.github.io/Leaderboard/)
 ### Run tests
 - `npx hint .` to run Webhint
 - `npx stylelint "**/*.{css,scss}"` to run Stylelint
+- `npx eslint .` to run ESLint
 
 ## Author
 
