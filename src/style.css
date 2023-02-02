@@ -150,33 +150,33 @@ form {
 }
 
 .inpt_card input {
-   border: none;
-   -webkit-appearance: none;
-   -moz-appearance: none;
-   -ms-appearance: none;
-   appearance: none;
-   outline: none;
-   height: 35px;
-   width: 100%;
-   padding-left: 15px;
-   font-size: 14px;
-   border-top-left-radius: 3px;
-   border-top-right-radius: 3px;
-   background:
-     linear-gradient(90deg, var(--hd-color), var(--hd-color)) center bottom/0 0.15em no-repeat,
-     linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
-     linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
-   transition: background-size 0.3s ease;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  height: 35px;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 14px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, var(--hd-color), var(--hd-color)) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
 }
 
 .inpt_card label {
-   position: absolute;
-   left: 15px;
-   top: 9px;
-   width: calc(100% - (30px));
-   overflow: hidden;
-   color: #aaa;
-   transition: all 0.3s ease;
+  position: absolute;
+  left: 15px;
+  top: 9px;
+  width: calc(100% - (30px));
+  overflow: hidden;
+  color: #aaa;
+  transition: all 0.3s ease;
 }
 
 .inpt_card input.dirty + label,
